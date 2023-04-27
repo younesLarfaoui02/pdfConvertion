@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AchatController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\FournisseurController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +24,7 @@ Route::get('/', function () {
 Route::resource('clients',ClientController::class);
 Route::resource('fournisseurs',FournisseurController::class);
 Route::resource('revenu',AchatController::class);
+Route::resource('employees',EmployeeController::class);
 Route::get('/revenu/get-produits-by-category/{id}',[AchatController::class,'get_produit']);
 Route::get('/revenu/get-produits-info/{id}',[AchatController::class,'info_produit']);
 Route::get('/revenu/get-price-by-qte/{produit_qte}',[AchatController::class,'get_price']);

@@ -317,4 +317,13 @@
     }, 200);
   }
 
+  $('#statut').change(function(){
+    if($(this).val() == 'célibataire'){
+      $('#enfants').prop( "disabled", true );
+    }
+    else{
+      $('#enfants').prop( "disabled", false );
+
+    }
+  })
 })();
