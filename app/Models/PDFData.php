@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fournisseur extends Model
+class PDFData extends Model
 {
     use HasFactory;
-    protected $table = 'fournisseurs';
-        protected $fillable = ['nom','tel','fax','email','adresse','ville'];
+    protected $fillable = ['nom','tel','fax','email','adresse'];
+    
 }

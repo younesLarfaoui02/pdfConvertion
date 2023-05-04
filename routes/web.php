@@ -4,6 +4,7 @@ use App\Http\Controllers\AchatController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\FournisseurController;
+use App\Http\Controllers\PDFController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+
+
+
+
+
+
+// ROUTE FOR PDF PACKAGE 
+Route::get('/downloadPDF/{id}',[PDFController::class,'downloadPDF'])->name('loadPdf');
 
 Route::resource('clients',ClientController::class);
 Route::resource('fournisseurs',FournisseurController::class);

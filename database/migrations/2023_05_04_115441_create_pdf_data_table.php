@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFournisseursTable extends Migration
+class CreatePdfDataTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateFournisseursTable extends Migration
      */
     public function up()
     {
-        Schema::create('fournisseurs', function (Blueprint $table) {
-            $table->id();
+        Schema::create('disneypluses', function (Blueprint $table) {
             $table->string('nom');
             $table->string('tel');
             $table->string('fax');
             $table->string('email');
             $table->text('adresse');
-            $table->string('ville');
             $table->timestamps();
         });
     }
@@ -32,6 +30,6 @@ class CreateFournisseursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fournisseurs');
+        Schema::dropIfExists('pdf_data');
     }
 }

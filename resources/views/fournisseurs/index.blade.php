@@ -56,7 +56,7 @@
                     <td>{{$fournisseur['adresse']}}</td>
                     <td>{{$fournisseur['ville']}}</td>
                     <td>
-                    <a href="#" title="modifier" class="btn btn-xs btn-outline btn-secondary add-tooltip">
+                    <a href="{{route('fournisseurs.show',$fournisseur['id'])}}" title="modifier" class="btn btn-xs btn-outline btn-secondary add-tooltip">
                       <i class="bi bi-info-circle"></i>
                     </a>
                       <a href="#" title="modifier" class="btn btn-xs btn-outline btn-success add-tooltip">

@@ -44,6 +44,7 @@ class FournisseurController extends Controller
             'fax' => 'required|max:255',
             'email' => 'required|email|unique:users|max:255',
             'adresse' => 'required',
+            'ville'=> 'required'
         ]);
         $fournisseur = Fournisseur::create($validatedData);
         return redirect()->route('fournisseurs.index')->with('success', 'User created successfully.');
@@ -56,9 +57,14 @@ class FournisseurController extends Controller
      * @param  \App\Models\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function show(rc $rc)
+    public function show($id)
     {
-        //
+
+
+
+
+        $fournisseur = Fournisseur::find($id);
+        return view('fournisseurs.show',compact('fournisseur'));
     }
 
     /**
@@ -67,7 +73,7 @@ class FournisseurController extends Controller
      * @param  \App\Models\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function edit(rc $rc)
+    public function edit()
     {
         //
     }
@@ -79,7 +85,7 @@ class FournisseurController extends Controller
      * @param  \App\Models\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, rc $rc)
+    public function update(Request $request, )
     {
         //
     }
@@ -90,8 +96,8 @@ class FournisseurController extends Controller
      * @param  \App\Models\rc  $rc
      * @return \Illuminate\Http\Response
      */
-    public function destroy(rc $rc)
+    public function destroy()
     {
-        //
+
     }
 }
